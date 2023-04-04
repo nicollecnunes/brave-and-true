@@ -44,3 +44,9 @@
 
 (valor-descontado-condicional deve-aplicar-desconto? 100)
 (valor-descontado-condicional deve-aplicar-desconto? 1000)
+
+; Função sem nome -> anônima
+(valor-descontado-condicional (fn [valor-bruto] (> valor-bruto 100)) 100)
+(valor-descontado-condicional (fn [valor-bruto] (> valor-bruto 100)) 1000)
+(valor-descontado-condicional #(> %1 100) 1000) ;primeiro argumento anônimo
+(valor-descontado-condicional #(> % 100) 1000) ;primeiro argumento anônimo
