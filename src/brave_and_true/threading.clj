@@ -49,7 +49,7 @@
 
 ;;;;;;;;;;;THREAD LAST;;;;;;;;;;;;
 ; standart use
-(defn product-to-discount 
+(defn product-to-discount
   [products]
   (first (reverse (sort-by :stock-count (filter large? (filter furniture? products))))))
 
@@ -59,11 +59,11 @@
 (defn product-to-discount-tl
   [products]
   (->> products
-       (filter furniture? ,,,)
-       (filter large? ,,,)
-       (sort-by :stock-count ,,,)
-       (reverse ,,,)
-       (first ,,,)))
+       (filter furniture?)
+       (filter large?)
+       (sort-by :stock-count)
+       (reverse)
+       (first)))
 
 (product-to-discount-tl products) ;=> Couch..
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -76,7 +76,7 @@
         current-buyers (get :buyers product [])
         updated-buyers (conj current-buyers buyer)
         updated-stock-count (- stock-count 1)]
-        (assoc (assoc product :stock-count updated-stock-count):buyers updated-buyers)))
+    (assoc (assoc product :stock-count updated-stock-count) :buyers updated-buyers)))
 
 (sell-product (products 0) "nicolle") ; => kettle stock-count 49, buyers nicolle
 
@@ -87,9 +87,9 @@
         current-buyers (get :buyers product [])
         updated-buyers (conj current-buyers buyer)
         updated-stock-count (- stock-count 1)]
-  (-> product
-      (assoc ,,, :stock-count updated-stock-count)
-      (assoc ,,, :buyers updated-buyers))))
+    (-> product
+        (assoc ,,, :stock-count updated-stock-count)
+        (assoc ,,, :buyers updated-buyers))))
 
 (sell-product-tf (products 0) "nicolle") ; => kettle stock-count 49, buyers nicolle
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -113,6 +113,25 @@
 (create-product-review-at 0) ; => This Kettle is so cool
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;;;;;;;;;;CONDITIONAL THREAD-FIRST;;;;;;;;;;;;
+;standart use
+(let [product (products 3)
+      active? (= (:status product) :active)
+      special? (:status? product)]
+  (if active?
+    (assoc product :status :inactve)
+    (if special?
+      (dissoc product :special?)
+      product)))
 
-; cond-> conditional-thread
+; cond-> conditional thread. if true, runs to the following form
+(let [product (products 3)
+      active? (= (:status product) :active)
+      special? (:status? product)]
+  (cond-> product
+    active? (assoc :status :inactve)
+    special? (dissoc :special?)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ; some-> some-thread

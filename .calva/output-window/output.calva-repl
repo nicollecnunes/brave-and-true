@@ -295,3 +295,7 @@ clj꞉brave-and-true.threading꞉> 
 clj꞉brave-and-true.threading꞉> 
 "This Kettle is so cool"
 clj꞉brave-and-true.threading꞉> 
+{:id 4, :name "Toaster", :type :appliance, :stock-count 100, :unit-size :small, :price 499.99, :status :inactve}
+clj꞉brave-and-true.threading꞉> 
+{:id 4, :name "Toaster", :type :appliance, :stock-count 100, :unit-size :small, :price 499.99, :status :inactve}
+clj꞉brave-and-true.threading꞉> 
