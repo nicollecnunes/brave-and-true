@@ -96,6 +96,23 @@
 
 
 ;;;;;;;;;;;AS THREAD;;;;;;;;;;;;
-; as-> as-thread
+;standart use
+(defn create-product-review
+  [id]
+  (let [p (:name (products id))]
+    (str "This " p " is so cool")))
+(create-product-review 0) ; => This Kettle is so cool
+
+; as-> as-thread: allow us to assign the previous result to a variable
+(defn create-product-review-at
+  [id]
+  (as-> (products id) p
+    (:name p)
+    (str "This " p " is so cool")))
+
+(create-product-review-at 0) ; => This Kettle is so cool
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 ; cond-> conditional-thread
 ; some-> some-thread

@@ -283,3 +283,15 @@ clj꞉brave-and-true.threading꞉> 
  :status :active,
  :buyers ["nicolle"]}
 clj꞉brave-and-true.threading꞉> 
+#'brave-and-true.threading/create-product-review
+clj꞉brave-and-true.threading꞉> 
+"ThisKettleis so cool"
+clj꞉brave-and-true.threading꞉> 
+#'brave-and-true.threading/create-product-review
+clj꞉brave-and-true.threading꞉> 
+"This Kettle is so cool"
+clj꞉brave-and-true.threading꞉> 
+#'brave-and-true.threading/create-product-review
+clj꞉brave-and-true.threading꞉> 
+"This Kettle is so cool"
+clj꞉brave-and-true.threading꞉> 
