@@ -89,4 +89,4 @@
   [item]
   (not (gratuito? item)))
 
-(def pago2? (comp not gratuito?))
+(def pago2? (comp not gratuito?)) ;simbolo pago2? , sem parametro , nao
