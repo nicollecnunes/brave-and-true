@@ -22,3 +22,11 @@
           (mymap fn (rest lista))))
     ))
 
+
+(defn mymap-recur-tail
+  [fn lista]
+  (let [primeiro (first lista)]
+    (if (not (nil? primeiro))
+      (do (fn primeiro)
+          (recur fn (rest lista))))))
+
