@@ -10,7 +10,7 @@
 ;   - See https://calva.io/connect-sequences/
 ; 
 ; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Using host:port 127.0.0.1:60082 ...
+; Using host:port 127.0.0.1:50197 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; TIPS:
@@ -23,279 +23,45 @@
 clj꞉brave-and-true.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉brave-and-true.core꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Connecting using "Leiningen" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Using host:port 127.0.0.1:60141 ...
-; Hooking up nREPL sessions ...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉brave-and-true.core꞉> 
-; Jack-in done.
-clj꞉brave-and-true.core꞉> 
-#'brave-and-true.threading/product-to-discount
-clj꞉brave-and-true.threading꞉> 
-; Syntax error compiling at (src/brave_and_true/threading.clj:47:1).
-; Unable to resolve symbol: products in this context
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/product-to-discount
-clj꞉brave-and-true.threading꞉> 
-; Syntax error compiling at (src/brave_and_true/threading.clj:46:1).
-; Unable to resolve symbol: products in this context
-clj꞉brave-and-true.threading꞉> 
-; Jacking in...
-; Connecting using "Leiningen" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; nREPL Connection was closed
-; Using host:port 127.0.0.1:60193 ...
-; Hooking up nREPL sessions ...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉brave-and-true.core꞉> 
-; Jack-in done.
-clj꞉brave-and-true.core꞉> 
-; Syntax error compiling at (src/brave_and_true/threading.clj:48:3).
-; Unable to resolve symbol: furniture? in this context
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/product-to-discount
-clj꞉brave-and-true.threading꞉> 
-; Syntax error compiling at (src/brave_and_true/threading.clj:47:1).
-; Unable to resolve symbol: products in this context
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/product-to-discount
-clj꞉brave-and-true.threading꞉> 
-; Syntax error compiling at (src/brave_and_true/threading.clj:47:1).
-; Unable to resolve symbol: products in this context
-clj꞉brave-and-true.threading꞉> 
-(product-to-discount products)
-; Syntax error compiling at (.calva/output-window/output.calva-repl:89:1).
-; Unable to resolve symbol: products in this context
-clj꞉brave-and-true.threading꞉> (using 'brave-and-true.threading)
-; Syntax error compiling at (.calva/output-window/output.calva-repl:92:32).
-; Unable to resolve symbol: using in this context
-clj꞉brave-and-true.threading꞉> 
-products
-; Syntax error compiling at (.calva/output-window/output.calva-repl:1:8019).
-; Unable to resolve symbol: products in this context
-clj꞉brave-and-true.threading꞉> 
-(def products [{:id 1
-                :name "Kettle"
-                :type :appliance
-                :stock-count 50
-                :unit-size :small
-                :price 100.40
-                :status :active}
-               {:id 2
-                :name "Couch"
-                :type :furniture
-                :stock-count 20
-                :unit-size :large
-                :price 4599.00
-                :status :active}
-               {:id 3
-                :name "Desk"
-                :type :furniture
-                :stock-count 40
-                :unit-size :medium
-                :price 1299.99
-                :status :active}
-               {:id 4
-                :name "Toaster"
-                :type :appliance
-                :stock-count 100
-                :unit-size :small
-                :price 499.99
-                :status :active}
-               {:id 5
-                :name "Bed"
-                :type :furniture
-                :stock-count 10
-                :unit-size :large
-                :status :active
-                :price 1200
-                :special? true}])
-#'brave-and-true.threading/products
-clj꞉brave-and-true.threading꞉> 
-products
-[{:id 1, :name "Kettle", :type :appliance, :stock-count 50, :unit-size :small, :price 100.4, :status :active}
- {:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active}
- {:id 3, :name "Desk", :type :furniture, :stock-count 40, :unit-size :medium, :price 1299.99, :status :active}
- {:id 4, :name "Toaster", :type :appliance, :stock-count 100, :unit-size :small, :price 499.99, :status :active}
- {:id 5,
-  :name "Bed",
-  :type :furniture,
-  :stock-count 10,
-  :unit-size :large,
-  :status :active,
-  :price 1200,
-  :special? true}]
-clj꞉brave-and-true.threading꞉> 
-({:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active}
- {:id 3, :name "Desk", :type :furniture, :stock-count 40, :unit-size :medium, :price 1299.99, :status :active}
- {:id 5,
-  :name "Bed",
-  :type :furniture,
-  :stock-count 10,
-  :unit-size :large,
-  :status :active,
-  :price 1200,
-  :special? true})
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/furniture?
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/product-to-discount
-clj꞉brave-and-true.threading꞉> 
-({:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active}
- {:id 3, :name "Desk", :type :furniture, :stock-count 40, :unit-size :medium, :price 1299.99, :status :active}
- {:id 5,
-  :name "Bed",
-  :type :furniture,
-  :stock-count 10,
-  :unit-size :large,
-  :status :active,
-  :price 1200,
-  :special? true})
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/furniture?
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/large?
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/large?
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/product-to-discount
-clj꞉brave-and-true.threading꞉> 
+nicolle1
+nil
+clj꞉brave-and-true.mymap꞉> 
+nicolle1
+nil
+clj꞉brave-and-true.mymap꞉> 
+nicolle1
+nil
+clj꞉brave-and-true.mymap꞉> 
+nicolle1
+nicolle2
+nicolle3
+(nil nil nil)
+clj꞉brave-and-true.mymap꞉> 
+(nicolle2 nicolle3)
+nil
+clj꞉brave-and-true.mymap꞉> 
+(nicolle2 nicolle3)
+nil
+clj꞉brave-and-true.mymap꞉> 
+(nicolle2 nicolle3)
+nil
+clj꞉brave-and-true.mymap꞉> 
+(nicolle2 nicolle3)
+nil
+clj꞉brave-and-true.mymap꞉> 
+(nicolle2 nicolle3)
+nil
+clj꞉brave-and-true.mymap꞉> 
 ()
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/large?
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/product-to-discount
-clj꞉brave-and-true.threading꞉> 
-({:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active}
- {:id 5,
-  :name "Bed",
-  :type :furniture,
-  :stock-count 10,
-  :unit-size :large,
-  :status :active,
-  :price 1200,
-  :special? true})
-clj꞉brave-and-true.threading꞉> 
-({:id 5,
-  :name "Bed",
-  :type :furniture,
-  :stock-count 10,
-  :unit-size :large,
-  :status :active,
-  :price 1200,
-  :special? true}
- {:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active})
-clj꞉brave-and-true.threading꞉> 
-({:id 5,
-  :name "Bed",
-  :type :furniture,
-  :stock-count 10,
-  :unit-size :large,
-  :status :active,
-  :price 1200,
-  :special? true}
- {:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active})
-clj꞉brave-and-true.threading꞉> 
-({:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active}
- {:id 5,
-  :name "Bed",
-  :type :furniture,
-  :stock-count 10,
-  :unit-size :large,
-  :status :active,
-  :price 1200,
-  :special? true})
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/product-to-discount-tf
-clj꞉brave-and-true.threading꞉> 
-{:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active}
-clj꞉brave-and-true.threading꞉> 
-({:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active}
- {:id 5,
-  :name "Bed",
-  :type :furniture,
-  :stock-count 10,
-  :unit-size :large,
-  :status :active,
-  :price 1200,
-  :special? true})
-clj꞉brave-and-true.threading꞉> 
-({:id 5,
-  :name "Bed",
-  :type :furniture,
-  :stock-count 10,
-  :unit-size :large,
-  :status :active,
-  :price 1200,
-  :special? true}
- {:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active})
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/product-to-discount
-clj꞉brave-and-true.threading꞉> 
-{:id 2, :name "Couch", :type :furniture, :stock-count 20, :unit-size :large, :price 4599.0, :status :active}
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/sell-product-tf
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/sell-product
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/sell-product
-clj꞉brave-and-true.threading꞉> 
-{:id 1,
- :name "Kettle",
- :type :appliance,
- :stock-count 49,
- :unit-size :small,
- :price 100.4,
- :status :active,
- :buyers ["nicolle"]}
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/sell-product-tf
-clj꞉brave-and-true.threading꞉> 
-{:id 1,
- :name "Kettle",
- :type :appliance,
- :stock-count 49,
- :unit-size :small,
- :price 100.4,
- :status :active,
- :buyers ["nicolle"]}
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/create-product-review
-clj꞉brave-and-true.threading꞉> 
-"ThisKettleis so cool"
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/create-product-review
-clj꞉brave-and-true.threading꞉> 
-"This Kettle is so cool"
-clj꞉brave-and-true.threading꞉> 
-#'brave-and-true.threading/create-product-review
-clj꞉brave-and-true.threading꞉> 
-"This Kettle is so cool"
-clj꞉brave-and-true.threading꞉> 
-{:id 4, :name "Toaster", :type :appliance, :stock-count 100, :unit-size :small, :price 499.99, :status :inactve}
-clj꞉brave-and-true.threading꞉> 
-{:id 4, :name "Toaster", :type :appliance, :stock-count 100, :unit-size :small, :price 499.99, :status :inactve}
-clj꞉brave-and-true.threading꞉> 
+nil
+clj꞉brave-and-true.mymap꞉> 
+nil
+nil
+clj꞉brave-and-true.mymap꞉> 
+; Jacking in...
+; Connecting using "undefined" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Aborting jack-in. No project type selected.
+; nREPL Connection was closed
