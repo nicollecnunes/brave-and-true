@@ -210,3 +210,24 @@ clj꞉brave-and-true.core꞉> 
 clj꞉brave-and-true.core꞉> (name-surname "nicolle-canuto_nunes.nunes@oi.com")
 ["nicolle" "canuto" "nunes" "nunes"]
 clj꞉brave-and-true.core꞉> 
+(defn letting
+  [mail]
+  (let [full-name (name-surname-tf mail)]
+    {:firstname first full-name
+     :lastname last full-name}))
+#'brave-and-true.core/letting
+clj꞉brave-and-true.core꞉> 
+(letting "nicolle-canuto_nunes.nunes@oi.com")
+{:firstname #function[clojure.core/first--5449],
+ ["nicolle" "canuto" "nunes" "nunes"] :lastname,
+ #function[clojure.core/last--5493] ["nicolle" "canuto" "nunes" "nunes"]}
+clj꞉brave-and-true.core꞉> 
+(defn letting
+  [mail]
+  (let [full-name (name-surname-tf mail)]
+    {:firstname (first full-name)
+     :lastname (last full-name)}))
+#'brave-and-true.core/letting
+clj꞉brave-and-true.core꞉> (letting "nicolle-canuto_nunes.nunes@oi.com")
+{:firstname "nicolle", :lastname "nunes"}
+clj꞉brave-and-true.core꞉> 

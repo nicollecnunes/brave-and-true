@@ -20,7 +20,13 @@
       (first)
       (clojure.string/split #"\.|_|-")))
 
-
+; #"\.|_|-" can also be witten as #"[.-_]"
 (defn name-surname
   [mail]
   (clojure.string/split (first (clojure.string/split mail #"@")) #"\.|_|-"))
+
+(defn letting
+  [mail]
+  (let [full-name (name-surname-tf mail)]
+    {:firstname (first full-name)
+      :lastname (last full-name)}))
