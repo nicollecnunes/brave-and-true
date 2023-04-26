@@ -20,3 +20,9 @@ pom.xml
 /checkouts
 /.env
 /target
+/.calva
+/.clj-kondo
+/.idea
+/.lsp
+/doc
+/.cpcache
