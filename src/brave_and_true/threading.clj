@@ -59,11 +59,11 @@
 (defn product-to-discount-tl
   [products]
   (->> products
-       (filter furniture?)
-       (filter large?)
-       (sort-by :stock-count)
-       (reverse)
-       (first)))
+       (filter furniture? ,,,)
+       (filter large? ,,,)
+       (sort-by :stock-count ,,,)
+       (reverse ,,,)
+       (first ,,,)))
 
 (product-to-discount-tl products) ;=> Couch..
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
