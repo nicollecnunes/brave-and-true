@@ -26,3 +26,7 @@ pom.xml
 /.lsp
 /doc
 /.cpcache
+Exercism/clojure/*/.lsp/
+Exercism/clojure/*/.exercism/
+Exercism/clojure/*/.cpcache/
+Exercism/clojure/*/.clj-kondo/
