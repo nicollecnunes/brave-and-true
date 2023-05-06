@@ -47,3 +47,4 @@ clj꞉bird-watcher-test꞉> (n-days-count [5, 9, 12, 6, 8, 8, 17] 6)
 ; Execution error (ClassCastException) at bird-watcher/n-days-count (bird_watcher.clj:19).
 ; class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
 clj꞉bird-watcher-test꞉> 
+; nREPL Connection was closed
