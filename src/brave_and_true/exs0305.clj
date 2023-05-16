@@ -16,3 +16,5 @@
 (defn multmult
   [& args]
   (reduce mult args))
+
+(multmult 2 4 5 8 7 5)
