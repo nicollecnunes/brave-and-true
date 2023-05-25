@@ -1,5 +1,15 @@
 (ns anagram 
   (:require [clojure.string :as str]))
 
+(defn different?
+  [w1 w2]
+  (not (= (str/lower-case w1) (str/lower-case w2))))
+
+(defn anagram?
+  [w1 w2]
+  (= (frequencies (str/lower-case w1)) (frequencies (str/lower-case w2))))
+
 (defn anagrams-for [word prospect-list] ;; <- arglist goes here
-  (filter #(and (not (= (str/lower-case word) (str/lower-case %))) (= (frequencies (str/lower-case word)) (frequencies (str/lower-case %)))) prospect-list))
+  (->> prospect-list
+       (filter #(different? word %))
+       (filter #(anagram? word %))))
